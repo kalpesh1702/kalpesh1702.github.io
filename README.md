@@ -1,6 +1,6 @@
 # kalpesh1702.github.io
 
-Personal portfolio of **Kalpesh Prajapati**: Senior Software Engineer (8+ years; Flipkart, KiviHealth) and AI code evaluator.
+Personal portfolio of **Kalpesh Prajapati**: Senior Software Engineer (8+ years at Skyflow, Flipkart, KiviHealth) and AI code evaluator.
 
 Live site: https://kalpesh1702.github.io
 
