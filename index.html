@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalpesh Prajapati | Senior Backend Engineer & AI Code Evaluator</title>
+<meta name="description" content="Senior Software Engineer with 8+ years at Skyflow, Flipkart and KiviHealth. Go, Java, C++, distributed systems, system design, and AI training / code evaluation.">
+<meta property="og:title" content="Kalpesh Prajapati | Senior Backend Engineer & AI Code Evaluator">
+<meta property="og:description" content="8+ years building and reviewing production backend systems. Go, Java, C++, system design, AI training and code evaluation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfbfa;--surface:#ffffff;--text:#16181d;--muted:#5b616e;--line:#e6e6e3;
+  --accent:#2f5bd3;--accent-soft:#eaf0ff;--chip:#f2f3f1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1115;--surface:#161920;--text:#e8e9ec;--muted:#9aa1ae;--line:#262a33;
+    --accent:#7c9cff;--accent-soft:#1c2440;--chip:#1d2129;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1115;--surface:#161920;--text:#e8e9ec;--muted:#9aa1ae;--line:#262a33;
+  --accent:#7c9cff;--accent-soft:#1c2440;--chip:#1d2129;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+nav .brand{font-weight:700;color:var(--text)}
+nav .links{display:flex;gap:18px;font-size:14px}
+nav .links a{color:var(--muted)}
+nav .links a:hover{color:var(--text);text-decoration:none}
+header{padding:72px 0 40px}
+.eyebrow{font:500 13px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.02em;margin:0 0 16px}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+.lede{font-size:18px;color:var(--muted);max-width:680px;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-weight:500;font-size:14px}
+.btn:hover{border-color:var(--accent);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:40px 0 0}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat b{display:block;font-size:24px;letter-spacing:-.01em}
+.stat span{font-size:13px;color:var(--muted)}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:22px;margin:0 0 24px;letter-spacing:-.01em}
+h3{font-size:17px;margin:0 0 4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+.card li{margin:4px 0}
+.meta{font-size:13px;color:var(--muted)}
+.tag{display:inline-block;font:500 12px/1 "JetBrains Mono",monospace;background:var(--accent-soft);color:var(--accent);padding:5px 8px;border-radius:6px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{font-size:12px;background:var(--chip);border:1px solid var(--line);padding:3px 8px;border-radius:999px;color:var(--muted)}
+.job{display:grid;grid-template-columns:160px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+.job .when{font-size:13px;color:var(--muted);padding-top:2px}
+.job ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+.job li{margin:4px 0}
+.skills{display:grid;grid-template-columns:180px 1fr;gap:10px 20px;font-size:15px}
+.skills dt{font-weight:600}
+.skills dd{margin:0;color:var(--muted)}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:13px}
+@media (max-width:720px){
+  nav .links{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid2{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:4px}
+  .skills{grid-template-columns:1fr;gap:2px}
+  .skills dd{margin-bottom:10px}
+  header{padding:48px 0 32px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#top">Kalpesh Prajapati</a>
+  <div class="links"><a href="#ai">AI training</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <button class="theme" id="theme" aria-label="Toggle dark mode">◐</button>
+</div></nav>
+
+<main class="wrap" id="top">
+<header>
+  <p class="eyebrow">Senior Software Engineer · AI Code Evaluator</p>
+  <h1>I build backend systems, and I judge whether code is correct.</h1>
+  <p class="lede">8+ years designing, reviewing and operating production backend systems at Skyflow, Flipkart and KiviHealth, plus paid AI-training work at Mercor creating expert demonstrations used to train AI agents. Go, Java, C++, distributed systems and system design.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:kalpeshprajapati353@gmail.com">Email me</a>
+    <a class="btn" href="https://linkedin.com/in/kalpesh-prajapati-92130413a" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/kalpesh1702" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://leetcode.com/u/kalpeshprajapati353/" target="_blank" rel="noopener">LeetCode</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>8+ yrs</b><span>production backend</span></div>
+    <div class="stat"><b>50+</b><span>AI-training tasks authored</span></div>
+    <div class="stat"><b>292</b><span>LeetCode solved (53 Hard)</span></div>
+    <div class="stat"><b>5.0★</b><span>82 Fiverr reviews</span></div>
+  </div>
+</header>
+
+<section id="ai">
+  <h2>What I bring to AI training &amp; evaluation</h2>
+  <div class="grid2">
+    <div class="card"><span class="tag">code evaluation</span><h3>Reviewing code for correctness</h3>
+      <p>I check requirements, edge cases, concurrency, failure handling, security and performance in that order, and I write down the exact input that breaks a solution.</p></div>
+    <div class="card"><span class="tag">task authoring</span><h3>Designing hard, verifiable tasks</h3>
+      <p>At Mercor I designed 50+ system-design review tasks for training AI agents, each with a goal, starting materials, steps and graded deliverables.</p></div>
+    <div class="card"><span class="tag">system design</span><h3>Design reviews at production depth</h3>
+      <p>I lead architectural design reviews at Skyflow and owned high- and low-level design for Flipkart's gift card platform.</p></div>
+    <div class="card"><span class="tag">clear writing</span><h3>Explaining the "why"</h3>
+      <p>Through 80+ Fiverr orders, including coding and system design mock interviews, I write scorecards that explain each judgment, not just the verdict.</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job"><div class="when">Feb 2022 – Present<br>Remote</div><div>
+    <h3>Senior Software Development Engineer · Skyflow</h3>
+    <ul>
+      <li>Own the Governance Core module end to end, from architecture through production monitoring.</li>
+      <li>Led the Policy Engine: authentication (JWT, API keys, Okta) and authorization (RBAC, PBAC).</li>
+      <li>Built Kafka-based real-time propagation of role and policy changes, backed by MongoDB, Redis and in-memory caches.</li>
+      <li>Shipped the Policy Engine as an embeddable library, removing network calls from the authorization path.</li>
+      <li>Built the CI/CD pipeline and a test framework from unit through load tests, with OpenTelemetry observability.</li>
+    </ul>
+    <div class="chips"><span class="chip">Go</span><span class="chip">Python</span><span class="chip">Kafka</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">OpenTelemetry</span></div>
+  </div></div>
+  <div class="job"><div class="when">Oct 2026 – Nov 2026<br>Remote · Contract</div><div>
+    <h3>AI Training Expert, Software Engineering &amp; System Design · Mercor</h3>
+    <ul>
+      <li>Created expert computer-use demonstrations for training AI agents: narrated, end-to-end system design reviews.</li>
+      <li>Designed 50+ task packages in two weeks that passed automated idea checks and human review.</li>
+      <li>Reviewed designs for entities, REST APIs, concurrency, failure handling, security, caching and capacity.</li>
+    </ul>
+    <div class="chips"><span class="chip">Google Docs</span><span class="chip">Excalidraw</span><span class="chip">Google Sheets</span><span class="chip">Rubric-based QC</span></div>
+  </div></div>
+  <div class="job"><div class="when">Jan 2022 – Present<br>Part-time</div><div>
+    <h3>Freelance Software Engineer &amp; Interview Coach · Fiverr</h3>
+    <ul>
+      <li>80+ orders for clients in the US, UAE, Saudi Arabia and elsewhere; 5.0★ rating, Level 2 seller.</li>
+      <li>Programming projects in C++, Java, Python and Go, delivered with tests and a written walkthrough.</li>
+      <li>Coding and system design mock interviews, each with a written scorecard and prep roadmap.</li>
+    </ul>
+  </div></div>
+  <div class="job"><div class="when">Jan 2020 – Feb 2022<br>Bangalore</div><div>
+    <h3>Software Development Engineer · Flipkart</h3>
+    <ul>
+      <li>Architected and maintained the Gift Card System for high availability and fault tolerance.</li>
+      <li>Built B2C, B2B and third-party gift card products on one shared core.</li>
+      <li>Worked on database sharding with master-slave replication and caching across MySQL, HBase and Redis.</li>
+    </ul>
+    <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Kafka</span><span class="chip">HBase</span><span class="chip">Hystrix</span></div>
+  </div></div>
+  <div class="job"><div class="when">Dec 2017 – Dec 2019<br>Gurugram</div><div>
+    <h3>Software Engineer · KiviHealth (MedRx Technologies)</h3>
+    <ul>
+      <li>Full-stack features for a Clinic Management System: doctor-patient workflows and inventory management.</li>
+    </ul>
+    <div class="chips"><span class="chip">JavaScript</span><span class="chip">React.js</span><span class="chip">PHP</span><span class="chip">Python</span></div>
+  </div></div>
+</section>
+
+<section id="projects">
+  <h2>Featured projects</h2>
+  <div class="grid2">
+    <div class="card"><span class="tag">Skyflow · 2022–now</span><h3>Governance Core: Policy Engine</h3>
+      <p>Centralized authentication and authorization layer that evaluates every access request.</p>
+      <ul><li>Metadata Service separated from the Policy Engine so each scales independently</li><li>Real-time policy propagation over Kafka</li><li>Library mode removes a network hop from every authorization check</li></ul></div>
+    <div class="card"><span class="tag">Flipkart · 2020–2022</span><h3>Gift Card Core Platform</h3>
+      <p>Issuance, activation, redemption, balance, expiry, refunds and settlement for B2C, B2B and partner cards.</p>
+      <ul><li>Idempotency keys and double-spend prevention for safe redemption</li><li>Hystrix circuit breakers so partner outages don't take checkout down</li><li>Sharded datastore with replication and caching</li></ul></div>
+    <div class="card"><span class="tag">Mercor · 2026</span><h3>AI Agent Training Library</h3>
+      <p>50+ expert system-design review tasks (booking, payments, rate limiting, notifications, inventory) recorded as narrated demonstrations for training computer-use AI agents.</p></div>
+    <div class="card"><span class="tag">KiviHealth · 2017–2019</span><h3>Clinic Management System</h3>
+      <p>Practice-management product for clinics: appointments, patient records, prescriptions, billing and pharmacy inventory.</p></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>C++ (8+ yrs), Go (5 yrs), Java (4 yrs), Python (8 yrs, scripting), SQL (8 yrs), JavaScript (2 yrs)</dd>
+    <dt>AI training</dt><dd>Code evaluation, rubric-based assessment, task and prompt authoring, expert demonstrations, technical writing</dd>
+    <dt>System design</dt><dd>Microservices, event-driven architecture, high availability, fault tolerance, sharding, caching, rate limiting</dd>
+    <dt>Data &amp; messaging</dt><dd>MySQL, MongoDB, HBase, Redis, Apache Kafka</dd>
+    <dt>Security</dt><dd>JWT, API keys, Okta, RBAC, PBAC</dd>
+    <dt>Ops &amp; testing</dt><dd>OpenTelemetry, Docker, Kubernetes, CI/CD; unit through load testing</dd>
+    <dt>Problem solving</dt><dd>LeetCode 292 solved (53 Hard) · HackerEarth Top 1% in Algorithms · Runner-up, CODEPHILE, GTU Tech Fest 2017</dd>
+  </dl>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="color:var(--muted);margin:0 0 16px">Open to part-time remote work: code evaluation, response ranking, task authoring and system-design review. Based in Ahmedabad, India (IST).</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:kalpeshprajapati353@gmail.com">kalpeshprajapati353@gmail.com</a>
+    <a class="btn" href="https://linkedin.com/in/kalpesh-prajapati-92130413a" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://www.hackerearth.com/@kalpesh1702/" target="_blank" rel="noopener">HackerEarth</a>
+    <a class="btn" href="https://www.fiverr.com/kalpesh17021997" target="_blank" rel="noopener">Fiverr</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Kalpesh Prajapati · B.Tech in ICT, DA-IICT</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme')==='dark'
+             : matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
